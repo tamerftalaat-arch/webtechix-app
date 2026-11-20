@@ -39,7 +39,21 @@ async function start(){
   if(d.brand?.logo) $("#brandLogo").src=d.brand.logo;
   if(d.hero?.[0]){$(".hero").style.backgroundImage=`linear-gradient(90deg,#071b35ef,#071b35a6),url("${d.hero[0].image}")`;$(".heroText span").textContent=d.hero[0].tag||"WEBTECHIX";$(".hero h1").textContent=d.hero[0].title||"نحوّل أفكارك إلى حلول رقمية";$(".hero p").textContent=d.hero[0].description||"";}
   renderCards("#services",d.services,"service");renderCards("#packages",d.packages,"package");
-  $("#projects").innerHTML=(d.projects||[]).map(p=>`<div class="project">${safe(p.title||p.name||"مشروع")}</div>`).join("");
+const projectLinks = {
+  "دار بيت الروايات": "https://betroawayat.blogspot.com/",
+  "دار الصومعة": "https://elsawmaa.blogspot.com/",
+  "دقائق علمية": "https://daqaeqelmia.blogspot.com/"
+};
+
+$("#projects").innerHTML = (d.projects || []).map(p => {
+  const title = p.title || p.name || "مشروع";
+  const key = Object.keys(projectLinks).find(k => title.includes(k));
+  const url = p.url || (key ? projectLinks[key] : "");
+
+  return url
+    ? `<a class="project" href="${safe(url)}" target="_blank" rel="noopener noreferrer">${safe(title)}<small>زيارة الموقع ↗</small></a>`
+    : `<div class="project">${safe(title)}</div>`;
+}).join("");
   $("#aboutTitle").textContent=d.about?.headline||"نحوّل أفكارك إلى حلول رقمية";$("#aboutDesc").textContent=d.about?.description||"";
   $("#values").innerHTML=(d.about?.values||[]).map(v=>`<div class="value">${safe(v)}</div>`).join("");
   $("#why").innerHTML=(d.whyChooseUs||[]).map(w=>`<div class="whyCard"><b>${safe(w.title)}</b><p>${safe(w.description)}</p></div>`).join("");
