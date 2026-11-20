@@ -1,5 +1,4 @@
 {
-  "id": "./",
   "name": "WEBTECHIX - الحلول الرقمية",
   "short_name": "WEBTECHIX",
   "lang": "ar",
@@ -7,27 +6,15 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#04143d",
-  "theme_color": "#04143d",
+  "background_color": "#f5f8fc",
+  "theme_color": "#071b35",
   "description": "بوابتك للحلول الرقمية المتكاملة",
   "icons": [
     {
-      "src": "icon-192.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "icon-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "icon-512-maskable.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ]
 }
