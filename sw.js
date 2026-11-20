@@ -1,4 +1,6 @@
-const CACHE = "webtechix-pwa-v3";
+
+const CACHE = "webtechix-pwa-v5";
+
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js",
   "./data.json", "./manifest.webmanifest",
