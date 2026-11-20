@@ -44,13 +44,26 @@ const projectLinks = {
   "دار الصومعة": "https://elsawmaa.blogspot.com/",
   "دقائق علمية": "https://daqaeqelmia.blogspot.com/" 
 };
+const projectLinks = {
+  "دار بيت الروايات": "https://betroawayat.blogspot.com/",
+  "دار الصومعة": "https://elsawmaa.blogspot.com/",
+  "دقائق علمية": "https://daqaeqelmia.blogspot.com/"
+};
 
-$("#projects").innerHTML = (d.projects || []).map(p => {
-  const title = p.title || p.name || "مشروع";
-  const key = Object.keys(projectLinks).find(k => title.includes(k));
-  const url = p.url || (key ? projectLinks[key] : "");
+const projectsRoot = $("#projects");
 
-  return url
+if (projectsRoot) {
+  projectsRoot.innerHTML = (d.projects || []).map(p => {
+    const title = p.title || p.name || "مشروع";
+    const key = Object.keys(projectLinks).find(k => title.includes(k));
+    const url = p.url || (key ? projectLinks[key] : "");
+
+    return url
+      ? `<a class="project" href="${safe(url)}" target="_blank" rel="noopener noreferrer">${safe(title)}<small>زيارة الموقع ↗</small></a>`
+      : `<div class="project">${safe(title)}</div>`;
+  }).join("");
+}
+
     ? `<a class="project" href="${safe(url)}" target="_blank" rel="noopener noreferrer">${safe(title)}<small>زيارة الموقع ↗</small></a>`
     : `<div class="project">${safe(title)}</div>`;
 }).join("");
