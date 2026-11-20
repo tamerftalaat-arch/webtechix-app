@@ -42,7 +42,7 @@ async function start(){
 const projectLinks = {
   "دار بيت الروايات": "https://betroawayat.blogspot.com/",
   "دار الصومعة": "https://elsawmaa.blogspot.com/",
-  "دقائق علمية": "https://daqaeqelmia.blogspot.com/"
+  "دقائق علمية": "https://daqaeqelmia.blogspot.com/" 
 };
 
 $("#projects").innerHTML = (d.projects || []).map(p => {
