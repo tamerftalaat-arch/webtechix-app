@@ -7,8 +7,8 @@
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#071b35",
-  "theme_color": "#071b35",
+  "background_color": "#04143d",
+  "theme_color": "#04143d",
   "description": "بوابتك للحلول الرقمية المتكاملة",
   "icons": [
     {
@@ -24,7 +24,7 @@
       "purpose": "any"
     },
     {
-      "src": "icon-512.png",
+      "src": "icon-512-maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

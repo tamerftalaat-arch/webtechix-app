@@ -1,8 +1,8 @@
-const CACHE = "webtechix-pwa-v3";
+const CACHE = "webtechix-pwa-v4";
 const CORE = [
   "./", "./index.html", "./styles.css", "./app.js",
   "./data.json", "./manifest.webmanifest",
-  "./icon-192.png", "./icon-512.png"
+  "./icon-192.png", "./icon-512.png", "./icon-512-maskable.png"
 ];
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)));
