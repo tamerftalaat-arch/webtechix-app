@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#071b35"><meta name="description" content="WEBTECHIX — بوابتك للحلول الرقمية المتكاملة">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css"><title>WEBTECHIX</title>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img id="brandLogo" src="assets/icon.svg" alt=""><div><b>WEBTECHIX</b><small>بوابتك للحلول الرقمية المتكاملة</small></div></div>
+  <button id="installBtn" class="install" hidden>تثبيت التطبيق</button>
+</header>
+<main id="app">
+  <section id="home" class="hero"><div class="heroText"><span>WEBTECHIX | حلول رقمية</span><h1>نحوّل أفكارك إلى حلول رقمية</h1><p>حلول تقنية تساعد مشروعك على بناء حضور رقمي احترافي.</p><a class="primary" href="#services">اكتشف خدماتنا</a></div></section>
+  <section class="section"><div class="sectionHead"><span>WEBTECHIX</span><h2>خدماتنا</h2><p>كل ما يحتاجه مشروعك في مكان واحد</p></div><div id="services" class="cards"></div></section>
+  <section class="section dark"><div class="sectionHead"><span>حلول تناسبك</span><h2>باقاتنا</h2><p>اختاري الحل المناسب لاحتياجات مشروعك</p></div><div id="packages" class="cards"></div></section>
+  <section class="section"><div class="sectionHead"><span>أعمالنا</span><h2>مشروعات تم تنفيذها</h2></div><div id="projects" class="projectGrid"></div></section>
+  <section class="section about"><div class="sectionHead"><span>تعرف علينا</span><h2>من نحن</h2></div><h3 id="aboutTitle"></h3><p id="aboutDesc"></p><div class="values" id="values"></div></section>
+  <section class="section why"><div class="sectionHead"><span>اختيارك الصحيح</span><h2>لماذا تختار WEBTECHIX؟</h2><p>لأن نجاحك الرقمي يبدأ بالاختيار الصحيح</p></div><div id="why" class="whyGrid"></div></section>
+  <section class="section contact"><div class="sectionHead"><span>نحن هنا لمساعدتك</span><h2>ابدأ مشروعك الآن</h2><p>تواصل معنا لمناقشة فكرتك واختيار الحل المناسب</p></div><a id="whatsapp" class="primary" href="https://wa.me/201027346504" target="_blank" rel="noopener">تواصل عبر واتساب</a></section>
+</main>
+<nav class="bottomNav"><a href="#home">الرئيسية</a><a href="#services">الخدمات</a><a href="#packages">الباقات</a><a href="#projects">أعمالنا</a><a href="#aboutTitle">من نحن</a></nav>
+<div id="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
